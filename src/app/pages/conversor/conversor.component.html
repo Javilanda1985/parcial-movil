@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Conversion </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="calc-main" style="padding-top: 30px; padding-left: 25px;">
+    <ion-label style="color: white; " >
+      Por favor digite los numeros dentro de los campos
+    </ion-label>
+  <form [formGroup]="forms">
+    <ion-label>Decimal</ion-label>
+    <ion-input type="text" name="decimal" placeholder="decimal" (ngModelChange)="decimal(newValue= $event)"
+      formControlName="decimal"></ion-input><br>
+      <ion-label>Binario</ion-label>
+    <ion-input type="text" name="binary" placeholder="binario" (ngModelChange)="binario(newValue= $event)"
+      formControlName="binary"><br>
+    </ion-input>
+    <ion-label>Octal</ion-label>
+      <ion-input type="text" name="octal" placeholder="octal" (ngModelChange)="octal(newValue= $event)"
+        formControlName="octal"><br>
+      </ion-input>
+      <ion-label>Hexadecimal</ion-label>
+        <ion-input type="text" name="hexa" placeholder="hexadecimal" (ngModelChange)="hexadecimal(newValue= $event)"
+          formControlName="hexa"><br>
+        </ion-input>
+  </form>
+
+  
+  </div>
+</ion-content> 
